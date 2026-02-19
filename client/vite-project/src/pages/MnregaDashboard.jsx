@@ -3,7 +3,7 @@ import React from 'react'
 function MnregaDashboard() {
   return (
     <div>MnregaDashboard
-      Aarsh2
+      I am Learning Python.
     </div>
     
   )
