@@ -1,33 +1,32 @@
-// import dotenv from "dotenv";
+
 import express from "express";
 import cors from "cors";
-import db from "./config/db.js";
+import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
+import authRoutes from "./routes/authRoutes.js";
+import dashboardRoutes from "./routes/dashboard.routes.js"
+
+dotenv.config();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "http://localhost:5173",
+  credentials: true
+}));
+
 app.use(express.json());
+app.use(cookieParser());
 
-app.get("/api/data", (req, res) => {
-  const sql = "SELECT * FROM dataset"; // ← replace with your real table name
+// Routes
 
-  console.log(" API HIT: /data");
-  console.log(" SQL QUERY:", sql);
 
-  db.query(sql, (err, results) => {
-    if (err) {
-      console.error(" QUERY ERROR:");
-      console.error("CODE:", err.code);
-      console.error("MESSAGE:", err.message);
-      return res.status(500).json(err);
-    }
+app.use("/api/auth", authRoutes);
+app.use("/api", dashboardRoutes);
 
-    console.log(" Rows fetched:", results.length);
-    console.log(" Sample row:", results[0]); // first row only
 
-    res.json(results);
-  });
-});
+const PORT = process.env.PORT || 3000;
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(` Server running on port ${PORT}`);
 });

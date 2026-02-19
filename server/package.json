@@ -11,11 +11,15 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "csv-parser": "^3.2.0",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",
+    "install": "^0.13.0",
     "jsonwebtoken": "^9.0.3",
-    "mysql2": "^3.16.3"
+    "mysql2": "^3.16.3",
+    "npm": "^11.10.0"
   }
 }
