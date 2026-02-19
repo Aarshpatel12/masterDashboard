@@ -1,7 +1,3 @@
-
-
-
-
 import dotenv from "dotenv";
 import mysql from "mysql2";
 
@@ -10,7 +6,11 @@ dotenv.config();
 const db = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
+
   password: "$$#1234abc@123",
+
+  password: process.env.DB_PASSWORD,
+
   
   database: process.env.DB_NAME,
   waitForConnections: true,

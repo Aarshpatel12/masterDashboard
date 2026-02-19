@@ -24,5 +24,4 @@ const updatePasswords = async () => {
     process.exit(1);
   }
 };
-
 updatePasswords();
