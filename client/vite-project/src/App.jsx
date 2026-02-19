@@ -6,6 +6,7 @@ import Data from "./componensts/Menrega/Data";
 import LoginPage from "./pages/loginPage";
 import RepresentData from "./componensts/Menrega/RepresentData";
 // import MnregaDashboard from "./pages/MnregaDashboard";
+import MnregaDashboard from "./pages/MnregaDashboard";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/mnrega-dashboard" element={<RepresentData />} />
+        {/* <Route path="/mnrega-dashboard" element={<RepresentDa />} /> */}
         <Route path="/login" element={<LoginPage/>}/>
       </Routes>
     </Router>
