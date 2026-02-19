@@ -31,7 +31,7 @@ function LoginPage(){
                 case "Deputy Commissioner":
                     navigate ("/deputy");
                     break;
-                case "Rural Development":
+                case "Rural Development (MNREGA)":
                     navigate ( "/mnrega-dashboard");
                     break;
                 default:

@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/menrega" element={<RepresentData />} />
+        <Route path="/mnrega-dashboard" element={<RepresentData />} />
         <Route path="/login" element={<LoginPage/>}/>
       </Routes>
     </Router>
