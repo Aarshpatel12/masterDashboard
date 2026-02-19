@@ -2,7 +2,7 @@ import React from 'react'
 
 function MnregaDashboard() {
   return (
-    <div>MnregaDashboard</div>
+    <div> This id MnregaDashboard</div>
   )
 }
 
