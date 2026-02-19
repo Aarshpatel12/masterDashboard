@@ -5,13 +5,15 @@ import Data from "./componensts/Menrega/Data";
 // import Graph from "./componensts/Menrega/Graph";
 import LoginPage from "./pages/loginPage";
 import RepresentData from "./componensts/Menrega/RepresentData";
+import MnregaDashboard from "./pages/MnregaDashboard";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/menrega" element={<RepresentData />} />
+        <Route path="/mnrega-dashboard" element={<RepresentData />} />
+        {/* <Route path="/mnrega-dashboard" element={<RepresentDa />} /> */}
         <Route path="/login" element={<LoginPage/>}/>
       </Routes>
     </Router>
