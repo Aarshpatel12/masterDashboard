@@ -2,7 +2,9 @@ import React from 'react'
 
 function MnregaDashboard() {
   return (
-    <div> This id MarvfyhvrfujrfvuwvfuiyfvieyrifvuvbiervbivbivnregaDashboard</div>
+    <div> This id MarvfyhvrfujrfvuwvfuiyfvieyrifvuvbiervbivbivnregaDashboard
+ <div>i have done</div>
+    </div>
   )
 }
 
